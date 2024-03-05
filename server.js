@@ -26,21 +26,22 @@ app.get("/api/notes", (req, res) => {
 
 // Save a new note
 app.post("/api/notes", (req, res) => {
+    
      fs.readFile("./db/db.json", "utf8", (err, data) => {
         if (err) {
             console.error(err);
             return res.status(500).json({ error: 'Error reading notes data' });
         }
-        const notes = JSON.parse(data);
+        const notes = JSON.parse(data );
         const newNote = req.body;
         newNote.id = notes.length + 1; // Assign a unique ID
         notes.push(newNote);
-        fs.writeFile("./db/db.json", JSON.stringify(notes), (err) => {
+        fs.writeFile("./db/db.json", JSON.stringify(notes, null,"\t"), (err) => {
             if (err) {
                 console.error(err);
                 return res.status(500).json({ error: 'Error writing new note' });
             }
-            res.json(notes);
+            res.json(newNote);
         });
     });
 });
