@@ -30,6 +30,8 @@ Once the server is running, users can then access the front end of the applicati
 
 This application is powered by Express meaning for it to function properly, there needs to be a server running in the background. To start the server, navigate to the directory of the application, install all dependencies (npm i), then type the command npm start (or node index.js). A message should then display in the command line saying "App listening at http://localhost:3001". Once the server is running, then navigate to the front end of the application directly from the command line by holding conreol key and clicking the link http://localhost:3001. From there, users can pull up any existing notes saved to the database or create new notes, which once saved will be pushed to the database and persisted.
 
+[Link to a live application](https://note-taker-anica-a74997e580e0.herokuapp.com/notes)<br/>
+
  ![Screenshot home page](Assets/screenshot1.png)
  ![screenshot notes](Assets/screenshot3.png)
  ![sreenshot results](Assets/screenshot2.png)
